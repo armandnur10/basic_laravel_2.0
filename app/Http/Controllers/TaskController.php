@@ -32,6 +32,11 @@ class TaskController extends Controller
         return view('task.detail', compact('task'));
     }
 
+    public function edit($id) {
+        $task = Task::findOrFail($id);
+        return view('task.edit', compact('task'));
+    }
+
     public function delete($id) {
         $task = Task::findOrFail($id);
         $task->delete();

@@ -31,6 +31,8 @@ Route::get('/task/{id}', 'TaskController@detail');
 
 Route::get('/delete/{id}', 'TaskController@delete');
 
+Route::get('/taskedit/{id}', 'TaskController@edit');
+
 
 Route::view('/tampilan', 'template.template');
 
